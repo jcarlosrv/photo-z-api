@@ -4,6 +4,10 @@ A FastAPI service that serves a trained XGBoost model for **photometric redshift
 estimation**. Given a galaxy's five SDSS magnitudes (`u, g, r, i, z`), it returns
 the predicted redshift behind a typed REST endpoint with auto-generated OpenAPI docs.
 
+**Live demo:** https://photo-z-api.onrender.com/docs
+_Hosted on Render's free tier — the first request after a period of inactivity may take
+~30–60s while the service wakes from sleep._
+
 ![Swagger UI](docs/swagger.png)
 
 ## What it does
