@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from mangum import Mangum
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, RedirectResponse
@@ -82,3 +83,5 @@ def predict_redshift(payload: PhotometryInput):
 @app.post("/predict/batch", response_model=BatchOutput)
 def predict_batch(payload: BatchInput):
     return BatchOutput(predictions=[_to_output(item) for item in payload.items])
+
+handler=Mangum(app)
