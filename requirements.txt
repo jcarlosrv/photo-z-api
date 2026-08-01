@@ -1,7 +1,4 @@
-fastapi
+-r requirements-lambda.txt
 uvicorn[standard]
-pydantic>=2
-xgboost
-numpy
 pytest
 httpx
