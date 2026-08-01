@@ -84,4 +84,4 @@ def predict_redshift(payload: PhotometryInput):
 def predict_batch(payload: BatchInput):
     return BatchOutput(predictions=[_to_output(item) for item in payload.items])
 
-handler=Mangum(app)
+handler = Mangum(app)
